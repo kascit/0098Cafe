@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <title>Cafe Coffee</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #333;
+        }
+        .navigation {
+            
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #333;
+        }
+        .navigation .icon {
+            height: 50px;
+            width: 50px;
+            margin-right: auto;
+        }
+        .navigation li {
+            list-style: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+        .navigation li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        .navigation li a:hover {
+            color: #e67e22;
+        }
+        .search {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+        .search input {
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            padding: 5px 10px;
+            font-size: 16px;
+            width: 200px;
+        }
+        .search svg {
+            margin-left: -30px;
+            cursor: pointer;
+        }
+        .hero {
+            background-image: url('https://source.unsplash.com/1600x900/?coffee,cafe');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+            background-color: #333;
+           
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            font-size: 14px; 
+            text-align: center; 
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+    border-radius: 8px; 
+            color: #fff;
+            
+        }
+        .hero h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #e67e22; 
+        }
+        .hero p {
+            font-size: 1.5em;
+            color: #fff;
+        }
+        .hero a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #e67e22;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .hero a:hover {
+            background-color: #d35400;
+        }
+        .content {
+            padding: 40px 20px;
+            text-align: center;
+            color: #fff;
+        }
+        .content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .content p {
+            font-size: 1.2em;
+            color: #ffffff;
+            max-width: 800px;
+            margin: 0 auto 20px;
+        }
+        .content img {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 10px;
+            margin: 20px 0;
+            color:#fff;
+        }
+        .footer {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                <path d="m320-240 160-122 160 122-60-198 160-114H544l-64-208-64 208H220l160 114-60 198ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"/>
+            </svg>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Contact</a></li>
+            <div class="search">
+                <input type="text" placeholder="Search...">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#5f6368">
+                    <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+                </svg>
+            </div>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1 >Welcome to Cafe Coffee</h1>
+<p>Your perfect place to relax and enjoy a cup of coffee</p>
+<p>At Cafe Coffee, we pride ourselves on creating a warm and inviting atmosphere where you can unwind and savor the finest coffee. Whether you're catching up with friends, working on a project, or simply taking a moment for yourself, our cafe is the ideal spot.</p>
+<p>We offer a wide variety of coffee blends, each carefully selected and brewed to perfection. Our skilled baristas are passionate about coffee and are always ready to craft the perfect cup for you. In addition to our exceptional coffee, we also serve a selection of delicious pastries and snacks to complement your drink.</p>
+<p>Come and experience the cozy ambiance, friendly service, and exceptional quality that make Cafe Coffee a favorite destination for coffee lovers. We look forward to welcoming you!</p>
+        </div>
+    </section>
+    <section class="content">
+        <h2>About Us</h2>
+        <p>At Cafe Coffee, we believe in serving the best coffee in town. Our beans are sourced from the finest plantations and brewed to perfection. Whether you're here for a quick coffee break or a leisurely afternoon, we have something for everyone.</p>
+        <p>Our journey began with a passion for coffee and a desire to create a space where people can come together and enjoy a great cup of coffee. We are committed to quality and excellence in everything we do, from our carefully selected beans to our friendly and knowledgeable staff.</p>
+        <p>We take pride in our sustainable practices, ensuring that our coffee is ethically sourced and our operations are environmentally friendly. Our team is dedicated to providing exceptional service and creating a welcoming atmosphere for all our guests.</p>
+        <p>At Cafe Coffee, we also believe in giving back to the community. We regularly host events and workshops to engage with our customers and support local causes. Join us and be a part of our coffee-loving community!</p>
+        <img src="https://i.pinimg.com/474x/08/af/dc/08afdce7d5dfb91429213a1bd4467b94.jpg" alt="Coffee">
+        <h2>Our Menu</h2>
+<p>Explore our wide range of coffee and snacks. From classic espresso to modern lattes, we have it all. Don't forget to try our freshly baked pastries and sandwiches.</p>
+<p>Our menu features a variety of coffee drinks, including cappuccinos, macchiatos, and cold brews, each crafted with precision and care. We also offer a selection of teas, hot chocolates, and refreshing iced beverages for those who prefer something different.</p>
+<p>In addition to our beverages, we have a delectable assortment of pastries, including croissants, muffins, and cookies, all baked fresh daily. Our sandwiches are made with high-quality ingredients and are perfect for a light lunch or a hearty snack.</p>
+<p>We also cater to dietary preferences and offer a range of vegan and gluten-free options. Whether you're in the mood for a sweet treat or a savory bite, our menu has something to satisfy every craving.</p>
+        <img src="https://i.pinimg.com/474x/b7/2e/25/b72e25abe3b0a67c11c227c4b5b0efe0.jpg" alt="Menu">
+        <h2>Visit Us</h2>
+<p>Located in the heart of the city, Cafe Coffee is the perfect spot to unwind. Come visit us and experience the cozy ambiance and friendly service.</p>
+<p>Our cafe is designed with your comfort in mind, featuring cozy seating, warm lighting, and a relaxing atmosphere. Whether you're looking for a quiet corner to read a book or a lively space to catch up with friends, you'll find it here.</p>
+<p>We are conveniently located near major landmarks and public transportation, making it easy for you to drop by anytime. Our friendly staff is always ready to welcome you with a smile and help you find your favorite coffee or snack.</p>
+<p>We also offer free Wi-Fi and ample power outlets, making Cafe Coffee an ideal spot for remote work or study sessions. Join us for a cup of coffee and make yourself at home!</p>
+        <img src="https://imgs.search.brave.com/mkdCFVgRzjlBvZj-umfPJec5eIvTXmsGIOUtxQG7dUA/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/MTE5MjAxNzAwMzMt/ZjgzOTY5MjRjMzQ4/P2ZtPWpwZyZ3PTMw/MDAmYXV0bz1mb3Jt/YXQmZml0PWNyb3Am/cT02MCZpeGxpYj1y/Yi00LjAuMyZpeGlk/PU0zd3hNakEzZkRC/OE1IeGxlSEJzYjNK/bExXWmxaV1I4TW54/OGZHVnVmREI4Zkh4/OGZBPT0.jpeg" alt="Cafe">
+    </section>
+    <footer class="footer">
+        <p>&copy; 2023 Cafe Coffee. All rights reserved.</p>
+    </footer>
+</body>
+</html>
